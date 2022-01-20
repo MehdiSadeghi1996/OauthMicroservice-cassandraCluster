@@ -14,11 +14,10 @@ var (
 
 func StartApplication() {
 
-	session, dbErr := cassandra.GetSession()
+	_, dbErr := cassandra.GetSession()
 	if dbErr != nil {
 		panic(dbErr)
 	}
-	session.Close()
 
 	dbRepository := db.NewRepository()
 	atService := access_token.NewService(dbRepository)
