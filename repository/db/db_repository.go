@@ -32,7 +32,6 @@ func (r *dbRepository) GetById(id string) (*access_token.AccessToken, *errors.Re
 	if err != nil {
 		return nil, errors.NewInternalServerError(err.Error())
 	}
-	defer session.Close()
 
 	var result access_token.AccessToken
 	err = session.Query(queryGetAccessToken, id).Scan(
@@ -56,8 +55,6 @@ func (r *dbRepository) Create(at access_token.AccessToken) *errors.RestErr {
 	if err != nil {
 		return errors.NewInternalServerError(err.Error())
 	}
-	defer session.Close()
-
 	err = session.Query(queryCreateAccessToken,
 		at.AccessToken,
 		at.UserId,
@@ -75,8 +72,6 @@ func (r *dbRepository) UpdateExpirationTime(token access_token.AccessToken) *err
 	if err != nil {
 		return errors.NewInternalServerError(err.Error())
 	}
-	defer session.Close()
-
 	err = session.Query(queryUpdateExpires,
 		token.Expires,
 		token.AccessToken,
