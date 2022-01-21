@@ -15,7 +15,7 @@ implement microservice of oauth using golang and cassandra to store user tokens
 ## Optimizations
 
 using one session of cassandra
-in cassandra doc , they say it is safe to use one session of it or cluster of it.
+in cassandra doc :it is safe to use one session of it or cluster of it.
 
 
 
