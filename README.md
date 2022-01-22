@@ -28,7 +28,7 @@ in cassandra doc :it is safe to use one session of it or cluster of it.
 
 ## Run Locally
 
-ساخت کانتینر کاساندرا در هاست داکر با داکر کاکپوز
+ساخت کانتینر کاساندرا در هاست داکر با داکر کامپوز
 
 ```bash
 version: '3.7'
