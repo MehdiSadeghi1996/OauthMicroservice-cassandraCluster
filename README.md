@@ -12,12 +12,6 @@ implement microservice of oauth using golang and cassandra to store user tokens
 ![Logo](https://cilium.io/static/04756b327d0e0b7bd9c44efa00e2839a/f275c/cassandra_go2.webp)
 
 
-## Optimizations
-
-using one session of cassandra
-in cassandra doc :it is safe to use one session of it or cluster of it.
-
-
 
 ## Features
 
